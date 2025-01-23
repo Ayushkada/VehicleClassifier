@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Detected Car and Approximations</h1>
+    <img src="{{ url_for('static', filename='results/' + filename) }}" alt="Detected Car" style="max-width: 100%; height: auto;">
+    <h2>5 Closest Approximations:</h2>
+    <ul>
+        {% for approximation in approximations %}
+            <li>{{ approximation }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
